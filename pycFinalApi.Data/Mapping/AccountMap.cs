@@ -1,7 +1,7 @@
 ﻿using NHibernate;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
-using pycFinalApi.Model;
+using pycFinalApi.Data;
 
 namespace pycFinalApi.Data
 {

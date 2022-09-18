@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using pycFinalApi.Model;
+using pycFinalApi.Data;
+using pycFinalApi.Dto;
 
 namespace pycFinalApi.Mapper
 {
@@ -7,11 +8,8 @@ namespace pycFinalApi.Mapper
     {
         public MappingProfile()
         {
-        
-
            
-
-            CreateMap<AccountDto, Account>().ReverseMap();
+             CreateMap<AccountDto, Account>().ReverseMap();
 
            
         }

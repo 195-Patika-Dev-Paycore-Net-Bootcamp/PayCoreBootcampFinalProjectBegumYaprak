@@ -3,7 +3,7 @@ using NHibernate;
 
 
 using pycFinalApi.Data;
-using pycFinalApi.Model;
+using pycFinalApi.Dto;
 
 namespace pycFinalApi.Service
 {

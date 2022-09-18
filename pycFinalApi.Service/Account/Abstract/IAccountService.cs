@@ -1,4 +1,7 @@
-﻿using pycFinalApi.Model;
+﻿
+
+using pycFinalApi.Data;
+using pycFinalApi.Dto;
 
 namespace pycFinalApi.Service
 {

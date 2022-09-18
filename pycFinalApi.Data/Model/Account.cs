@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace pycFinalApi.Model
+namespace pycFinalApi.Data
 {
     public class Account
     {

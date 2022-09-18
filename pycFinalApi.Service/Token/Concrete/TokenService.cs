@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NHibernate;
-using pycFinalApi.Model;
+
 using pycFinalApi.Base;
 using pycFinalApi.Data;
 using Serilog;
