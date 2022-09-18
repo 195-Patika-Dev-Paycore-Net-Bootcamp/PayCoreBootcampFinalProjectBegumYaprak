@@ -27,9 +27,12 @@ namespace pycFinalApi.Dto
         public string Email { get; set; }
 
 
+        [RoleAttribute]
+        public string Role { get; set; }
 
-        [Display(Name = "Last Activity")]
-        public DateTime LastActivity { get; set; }
+
+        //[Display(Name = "Last Activity")]
+        //public DateTime LastActivity { get; set; }
 
 
 

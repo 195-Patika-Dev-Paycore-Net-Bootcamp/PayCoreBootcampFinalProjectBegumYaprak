@@ -72,7 +72,7 @@ namespace pycFinalApi.Service
                 {
                     AccessToken = token,
                     ExpireTime = now.AddMinutes(jwtConfig.AccessTokenExpiration),
-                   // Role = account.Role,
+                    Role = account.Role,
                     UserName = account.UserName,
                     SessionTimeInSecond = jwtConfig.AccessTokenExpiration * 60
                 };
@@ -112,7 +112,7 @@ namespace pycFinalApi.Service
             {
                 new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
                 new Claim(ClaimTypes.Name, account.UserName),
-                //new Claim(ClaimTypes.Role, account.Role),
+                new Claim(ClaimTypes.Role, account.Role),
                 new Claim("AccountId", account.Id.ToString()),
                 new Claim("Email",account.Email)
             };
