@@ -3,7 +3,7 @@ using pycFinalApi.Base;
 using pycFinalApi.Service;
 
 
-namespace PycApi
+namespace pycFinalApi
 {
     [ApiController]
     [Route("api/nhb/[controller]")]
@@ -17,7 +17,7 @@ namespace PycApi
         }
 
 
-        [HttpPost(" Login ")]
+        [HttpPost("Login")]
         public BaseResponse<TokenResponse> Login([FromBody] TokenRequest request)
         {
             var response = tokenService.GenerateToken(request);

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using pycFinalApi.Base;
 using pycFinalApi.Service;
 
 namespace pycFinalApi
@@ -39,7 +40,7 @@ namespace pycFinalApi
             return Ok(result);
         }
 
-        
+        [Authorize]
         [HttpGet("{id}")]
         public virtual IActionResult GetById(int id)
         {

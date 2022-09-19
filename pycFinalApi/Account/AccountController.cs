@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using pycFinalApi.Data;
 using pycFinalApi.Dto;
@@ -7,7 +6,6 @@ using pycFinalApi.Service;
 
 namespace pycFinalApi
 {
-
     [ApiController]
     [Route("api/nhb/[controller]")]
     public class AccountController : BaseController<AccountDto, Account>

@@ -10,7 +10,7 @@ namespace pycFinalApi.StartUpExtension
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pyc Api Management", Version = "v1.0" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Pyc FinalHomeWork Api ", Version = "v1.0" });
                 c.OperationFilter<ExtensionSwaggerFileOperationFilter>();
 
                 var securityScheme = new OpenApiSecurityScheme
