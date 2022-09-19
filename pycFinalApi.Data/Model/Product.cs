@@ -22,6 +22,7 @@ namespace pycFinalApi.Data.Model
 
         public virtual bool IsOfferable { get; set; }
 
+        public virtual bool IsSold { get; set; }    
         public virtual Category Category { get; set; }
     }
 }
