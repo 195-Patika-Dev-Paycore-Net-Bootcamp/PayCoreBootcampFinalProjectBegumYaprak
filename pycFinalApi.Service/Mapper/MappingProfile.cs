@@ -12,6 +12,7 @@ namespace pycFinalApi.Mapper
            
              CreateMap<AccountDto, Account>().ReverseMap();
              CreateMap<CategoryDto, Category>().ReverseMap();
+             CreateMap<ProductDto, Product>().ReverseMap();
 
            
         }

@@ -21,7 +21,7 @@ namespace pycFinalApi
             this.mapper = mapper;
         }
 
-        [Authorize]
+        
         [HttpGet]
         public virtual IActionResult GetAll()
         {
@@ -40,7 +40,7 @@ namespace pycFinalApi
             return Ok(result);
         }
 
-        [Authorize]
+      
         [HttpGet("{id}")]
         public virtual IActionResult GetById(int id)
         {

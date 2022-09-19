@@ -12,6 +12,7 @@ namespace pycFinalApi.Data.Model
 		public virtual int Id { get; set; }
 
 		public virtual string CategoryName { get; set; }
+		public virtual IList<Product> Products { get; set; }
 
 
 

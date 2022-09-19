@@ -16,6 +16,7 @@ namespace pycFinalApi.StartUpExtension
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
           
 
 
