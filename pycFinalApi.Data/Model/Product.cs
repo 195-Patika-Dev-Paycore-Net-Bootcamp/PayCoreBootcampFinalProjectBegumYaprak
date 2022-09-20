@@ -1,8 +1,11 @@
-﻿using System;
+﻿using pycFinalApi.Base.Enum;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Color = pycFinalApi.Base.Enum.Color;
 
 namespace pycFinalApi.Data.Model
 {
@@ -14,15 +17,18 @@ namespace pycFinalApi.Data.Model
 
         public virtual string Description { get; set; }
 
-        public virtual int Price { get; set; }  
+        public virtual int Price { get; set; }
 
-        public virtual string Color { get; set; }   
+        public virtual string Color { get; set; }
 
         public virtual string Brand { get; set; }
 
         public virtual bool IsOfferable { get; set; }
 
-        public virtual bool IsSold { get; set; }    
-        public virtual Category Category { get; set; }
+        public virtual bool IsSold { get; set; }
+
+        public virtual Category Category { get; set; }  
+
+        public virtual int CategoryId { get; set; }
     }
 }

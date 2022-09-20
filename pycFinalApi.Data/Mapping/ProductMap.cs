@@ -43,22 +43,29 @@ namespace pycFinalApi.Data.Mapping
                 x.Type(NHibernateUtil.Int32);
                 x.NotNullable(true);
             });
-            
+
             Property(b => b.Color, x =>
             {
-               
-                x.Type(NHibernateUtil.String);
-                x.NotNullable(true);
-            });   
-            
-            Property(b => b.Brand, x =>
-            {
-                
+
                 x.Type(NHibernateUtil.String);
                 x.NotNullable(true);
             });
-            
+
+            Property(b => b.Brand, x =>
+            {
+
+                x.Type(NHibernateUtil.String);
+                x.NotNullable(true);
+            });
+
             Property(b => b.IsOfferable, x =>
+            {
+               
+                x.Type(NHibernateUtil.Boolean);
+                x.NotNullable(true);
+            }); 
+
+            Property(b => b.IsSold, x =>
             {
                
                 x.Type(NHibernateUtil.Boolean);

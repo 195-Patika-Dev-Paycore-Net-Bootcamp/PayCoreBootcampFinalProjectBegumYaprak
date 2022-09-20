@@ -20,8 +20,31 @@ namespace pycFinalApi.Controllers
             this.productService = productService;
             this.mapper = mapper;
         }
+
+
+        [HttpPost]
+        public override IActionResult Create([FromBody] ProductDto dto)
+        {
             
-        
+            var result = productService.Insert(dto);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            if (result.Response is null)
+            {
+                return NoContent();
+            }
+
+            if (result.Success)
+            {
+                return StatusCode(201, result);
+            }
+
+            return BadRequest(result);
+        }
     }
 
     

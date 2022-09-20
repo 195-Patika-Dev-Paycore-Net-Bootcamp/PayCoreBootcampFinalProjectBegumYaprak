@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using pycFinalApi.Base;
 using pycFinalApi.Base.Attribute;
+using pycFinalApi.Base.Enum;
 using pycFinalApi.Data.Model;
 
 namespace pycFinalApi.Dto
@@ -30,18 +31,21 @@ namespace pycFinalApi.Dto
 
 
         [Required]
-       // [ColorAttribute]
+        // [ColorAttribute]
         public string Color { get; set; }
 
 
         [Required]
         //[BrandAttribute]
-        public  string Brand { get; set; }
+        public string Brand { get; set; }
 
 
         [Required]
         public  bool IsOfferable { get; set; }
+        
+        [Required]
+        public  bool IsSold { get; set; }
 
-        public  CategoryDto Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }
