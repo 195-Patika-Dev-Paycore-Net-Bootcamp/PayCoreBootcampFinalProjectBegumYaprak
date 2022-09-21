@@ -17,14 +17,14 @@ namespace pycFinalApi.Service
     {
 
         protected readonly ISession session;
-        protected readonly IHibernateRepository<Account> hibernateRepository;
+        protected readonly IHibernateRepository<User> hibernateRepository;
         private readonly JwtConfig jwtConfig;
 
         public TokenService(ISession session,  IOptionsMonitor<JwtConfig> jwtConfig)
         {
             this.session = session;
             this.jwtConfig = jwtConfig.CurrentValue;
-            hibernateRepository = new HibernateRepository<Account>(session);
+            hibernateRepository = new HibernateRepository<User>(session);
         }
 
 
@@ -72,7 +72,7 @@ namespace pycFinalApi.Service
                 {
                     AccessToken = token,
                     ExpireTime = now.AddMinutes(jwtConfig.AccessTokenExpiration),
-                    Role = account.Role,
+                 
                     UserName = account.UserName,
                     SessionTimeInSecond = jwtConfig.AccessTokenExpiration * 60
                 };
@@ -87,7 +87,7 @@ namespace pycFinalApi.Service
         }
 
 
-        private string GetToken(Account account, DateTime date)
+        private string GetToken(User account, DateTime date)
         {
             Claim[] claims = GetClaims(account);
             byte[] secret = Encoding.ASCII.GetBytes(jwtConfig.Secret);
@@ -106,13 +106,12 @@ namespace pycFinalApi.Service
             return accessToken;
         }
 
-        private Claim[] GetClaims(Account account)
+        private Claim[] GetClaims(User account)
         {
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
                 new Claim(ClaimTypes.Name, account.UserName),
-                new Claim(ClaimTypes.Role, account.Role),
                 new Claim("AccountId", account.Id.ToString()),
                 new Claim("Email",account.Email)
             };

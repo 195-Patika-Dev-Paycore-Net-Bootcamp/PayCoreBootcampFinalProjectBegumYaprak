@@ -9,8 +9,10 @@ namespace pycFinalApi.Data
     {
         void BeginTransaction();
         void Commit();
+
         void Rollback();
         void CloseTransaction();
+       
         void  Save(Entity entity);
         void Update(Entity entity);
         void Delete(int id);

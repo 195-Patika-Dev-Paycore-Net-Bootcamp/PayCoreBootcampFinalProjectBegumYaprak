@@ -21,7 +21,7 @@ namespace pycFinalApi
             this.mapper = mapper;
         }
 
-        
+       
         [HttpGet]
         public virtual IActionResult GetAll()
         {

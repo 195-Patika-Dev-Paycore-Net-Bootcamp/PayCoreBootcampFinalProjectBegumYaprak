@@ -8,16 +8,16 @@ namespace pycFinalApi
 {
     [ApiController]
     [Route("api/nhb/[controller]")]
-    public class AccountController : BaseController<AccountDto, Account>
+    public class UserController : BaseController<UserDto, User>
     {
-        private readonly IAccountService accountService;
+        private readonly IUserService userService;
         private readonly IMapper mapper;
 
 
-        public AccountController(IAccountService accountService, IMapper mapper) : base(accountService, mapper)
+        public UserController(IUserService userService, IMapper mapper) : base(userService, mapper)
         {
             this.mapper = mapper;
-            this.accountService = accountService;
+            this.userService = userService;
         }
 
 

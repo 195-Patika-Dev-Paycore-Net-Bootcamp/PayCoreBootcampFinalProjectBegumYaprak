@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using pycFinalApi.Base;
 using pycFinalApi.Data.Model;
 using pycFinalApi.Dto;
 using pycFinalApi.Service;
@@ -22,29 +23,6 @@ namespace pycFinalApi.Controllers
         }
 
 
-        [HttpPost]
-        public override IActionResult Create([FromBody] ProductDto dto)
-        {
-            
-            var result = productService.Insert(dto);
-
-            if (!result.Success)
-            {
-                return BadRequest(result);
-            }
-
-            if (result.Response is null)
-            {
-                return NoContent();
-            }
-
-            if (result.Success)
-            {
-                return StatusCode(201, result);
-            }
-
-            return BadRequest(result);
-        }
     }
 
     

@@ -28,6 +28,7 @@ namespace pycFinalApi.Data
             transaction.Commit();
         }
 
+
         public void Rollback()
         {
             transaction.Rollback();
@@ -41,6 +42,9 @@ namespace pycFinalApi.Data
                 transaction = null;
             }
         }
+        
+
+       
 
         public void Save(Entity entity)
         {

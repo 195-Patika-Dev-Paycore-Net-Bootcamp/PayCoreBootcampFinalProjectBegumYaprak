@@ -31,12 +31,9 @@ namespace pycFinalApi.Dto
 
 
         [Required]
-        // [ColorAttribute]
         public string Color { get; set; }
 
-
         [Required]
-        //[BrandAttribute]
         public string Brand { get; set; }
 
 
@@ -47,5 +44,8 @@ namespace pycFinalApi.Dto
         public  bool IsSold { get; set; }
 
         public int CategoryId { get; set; }
+
+        public int UserId { get; set; }
+
     }
 }

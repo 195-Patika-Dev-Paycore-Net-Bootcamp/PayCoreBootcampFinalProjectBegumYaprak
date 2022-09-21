@@ -71,10 +71,13 @@ namespace pycFinalApi.Service
             catch (Exception ex)
             {
                 Log.Error("BaseService.Insert", ex);
+                
                 hibernateRepository.Rollback();
                 hibernateRepository.CloseTransaction();
                 return new BaseResponse<Dto>(ex.Message);
             }
+
+
 
         }
 
@@ -132,6 +135,7 @@ namespace pycFinalApi.Service
                 hibernateRepository.CloseTransaction();
                 return new BaseResponse<Dto>(ex.Message);
             }
+
         }
 
 

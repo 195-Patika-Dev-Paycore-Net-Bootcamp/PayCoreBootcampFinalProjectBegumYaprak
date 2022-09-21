@@ -6,7 +6,7 @@ using pycFinalApi.Base;
 
 namespace pycFinalApi.Service
 {
-    public interface IAccountService : IBaseService<AccountDto, Account>
+    public interface IUserService : IBaseService<UserDto, User>
     {
     }
 }

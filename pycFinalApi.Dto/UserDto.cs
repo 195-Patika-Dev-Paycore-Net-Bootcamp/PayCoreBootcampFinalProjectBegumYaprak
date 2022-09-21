@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace pycFinalApi.Dto
 {
-    public class AccountDto
+    public class UserDto
     {
         [Required]
         [MaxLength(125)]
@@ -20,22 +20,11 @@ namespace pycFinalApi.Dto
         [Required]
         [MaxLength(500)]
         public string Name { get; set; }
-
+            
         [Required]
         [EmailAddress]
         [MaxLength(500)]
         public string Email { get; set; }
-
-
-        [RoleAttribute]
-        public string Role { get; set; }
-
-
-        //[Display(Name = "Last Activity")]
-        //public DateTime LastActivity { get; set; }
-
-
-
 
     }
 }

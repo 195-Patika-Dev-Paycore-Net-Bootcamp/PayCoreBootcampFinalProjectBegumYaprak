@@ -7,11 +7,11 @@ namespace pycFinalApi
 {
     [ApiController]
     [Route("api/nhb/[controller]")]
-    public class TokenController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly ITokenService tokenService;
 
-        public TokenController(ITokenService tokenService)
+        public LoginController(ITokenService tokenService)
         {
             this.tokenService = tokenService;
         }

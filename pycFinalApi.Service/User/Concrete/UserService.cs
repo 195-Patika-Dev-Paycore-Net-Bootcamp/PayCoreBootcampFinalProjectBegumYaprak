@@ -6,19 +6,19 @@ using pycFinalApi.Base;
 
 namespace pycFinalApi.Service
 {
-    public class AccountService : BaseService<AccountDto, Account>, IAccountService
+    public class UserService : BaseService<UserDto, User>, IUserService
     {
 
         protected readonly ISession session;
         protected readonly IMapper mapper;
-        protected readonly IHibernateRepository<Account> hibernateRepository;
+        protected readonly IHibernateRepository<User> hibernateRepository;
 
-        public AccountService(ISession session, IMapper mapper) : base(session, mapper)
+        public UserService(ISession session, IMapper mapper) : base(session, mapper)
         {
             this.session = session;
             this.mapper = mapper;
 
-            hibernateRepository = new HibernateRepository<Account>(session);
+            hibernateRepository = new HibernateRepository<User>(session);
         }
 
 

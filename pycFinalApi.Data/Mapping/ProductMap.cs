@@ -72,7 +72,26 @@ namespace pycFinalApi.Data.Mapping
                 x.NotNullable(true);
             });
 
-            ManyToOne(product => product.Category, map => map.Column("CategoryId"));
+
+
+            //ManyToOne(c => c.Category, p =>
+            //{
+
+            //    p.Column("CategoryId");
+            //    p.Fetch(FetchKind.Join);
+            //    p.NotNullable(true);
+            //    Lazy(false);
+            //});
+
+            //ManyToOne(c => c.User, p =>
+            //{
+
+            //    p.Column("UserId");
+            //    p.Fetch(FetchKind.Join);
+            //    p.NotNullable(true);
+            //    Lazy(false);
+            //});
+
 
             Table("product");
         }

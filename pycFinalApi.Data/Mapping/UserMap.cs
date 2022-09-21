@@ -5,9 +5,9 @@ using pycFinalApi.Data;
 
 namespace pycFinalApi.Data
 {
-    public class AccountMap : ClassMapping<Account>
+    public class UserMap : ClassMapping<User>
     {
-        public AccountMap()
+        public UserMap()
         {
             Id(x => x.Id, x =>
             {
@@ -46,12 +46,6 @@ namespace pycFinalApi.Data
                 x.NotNullable(true);
             });
 
-            Property(b => b.Role, x =>
-            {
-                x.Length(50);
-                x.Type(NHibernateUtil.String);
-                x.NotNullable(true);
-            });
 
             Property(b => b.LastActivity, x =>
             {
@@ -60,9 +54,7 @@ namespace pycFinalApi.Data
             });
 
 
-
-
-            Table("account");
+            Table("user");
         }
     }
 }
