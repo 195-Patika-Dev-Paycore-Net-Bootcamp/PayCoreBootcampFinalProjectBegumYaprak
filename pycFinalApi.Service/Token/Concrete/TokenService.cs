@@ -49,7 +49,7 @@ namespace pycFinalApi.Service
                     return new BaseResponse<TokenResponse>("Please validate your informations that you provided.");
                 }
 
-                DateTime now = DateTime.UtcNow;
+                DateTime now = DateTime.Now;
                 string token = GetToken(account, now);
 
                 try

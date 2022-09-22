@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using pycFinalApi.Base;
-using pycFinalApi.Base.Attribute;
+
 using pycFinalApi.Base.Enum;
 using pycFinalApi.Data.Model;
 

@@ -8,5 +8,13 @@ namespace pycFinalApi.Data.Model
 {
     public class OfferEntity
     {
+        public virtual int Id { get; set; }
+
+        public virtual int OfferAmount { get; set; }
+
+        public virtual int ProductId { get; set; }
+
+        public virtual int UserId { get; set; }
+
     }
 }

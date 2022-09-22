@@ -26,7 +26,7 @@ namespace pycFinalApi
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Startup.JwtConfig.Secret)),
                     ValidAudience = Startup.JwtConfig.Audience,
                     ValidateAudience = true, // default True
-                    ValidateLifetime = true,
+                   // ValidateLifetime = true,
                     ClockSkew = TimeSpan.FromMinutes(2)
                 };
             });
